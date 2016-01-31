@@ -48,6 +48,7 @@ def toPdf(data):
 
 def main(data):
     data_ = json.loads(data)
+    toPdf(data_)
 
 if __name__ == '__main__':
     main(sys.argv[1])
