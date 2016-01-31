@@ -2,10 +2,15 @@
 import json
 import sys
 import dicttoxml
+from sys import argv
 
 def toPdf(data):
+    #convert json data to xml
     xml = dicttoxml.dicttoxml(data)
-    print xml
+
+    f = open("report_" + data["organization"] + ".xml", "wb")
+    f.write(xml)
+    f.close()
 
 def main(data):
     data_ = json.loads(data)
